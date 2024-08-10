@@ -3618,12 +3618,14 @@ template {
 .devicon-csharp-line-wordmark:before,
 .devicon-csharp-line:before {
     content: "\e636"
+    
 }
 
 .devicon-csharp-plain-wordmark:before,
 .devicon-csharp-plain:before {
     content: "\e637"
 }
+
 
 .devicon-c-line-wordmark:before,
 .devicon-c-line:before {
@@ -4428,7 +4430,9 @@ template {
 .devicon-csharp-line.colored,
 .devicon-csharp-plain-wordmark.colored,
 .devicon-csharp-plain.colored {
+   
     color: #68217a
+    
 }
 
 .devicon-css3-plain-wordmark.colored,
@@ -4822,11 +4826,11 @@ a img {
 }
 
 #particles-js {
-    background: #000000;
+    background: #ffffff;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #020202, #030d13);
+    background: -webkit-linear-gradient(to right, #000000, #000000);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #040513, #121314);
+    background: linear-gradient(to right, #000000, #000000);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     display: flex;
@@ -4837,7 +4841,9 @@ a img {
     background-size: cover;
     background-attachment: fixed
 }
-
+html {
+    scroll-behavior: smooth;
+}
 #particles-js .particles-js-canvas-el {
     width: 100% !important;
     height: 100vh !important
@@ -4863,7 +4869,12 @@ a img {
     line-height: 1;
     color: #fff;
 }
-
+.header, .header * {
+    user-select: none !important; /* Prevent text selection */
+    -webkit-user-select: none !important; /* Safari */
+    -moz-user-select: none !important; /* Firefox */
+    -ms-user-select: none !important; /* Internet Explorer/Edge */
+}
 @media only screen and (min-width:550px) {
     .header .site-title {
         margin: 0;
@@ -4927,7 +4938,7 @@ a img {
 
 .header-icons .icon:active,
 .header-icons .icon:hover {
-    color: #1488CC;
+    color: #000000;
     background: #fff
 }
 
@@ -4992,8 +5003,9 @@ a img {
     font-size: 60px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+   
+    
+    
 }
 
 .user p {
@@ -5026,7 +5038,14 @@ a img {
         width: 80%
     }
 }
+.skills {
+    text-align: center; /* Center-align text horizontally within the div */
+}
 
+.skills h1 {
+    display: inline-block; /* Ensure the header is treated as an inline element */
+    margin: 0 auto; /* Center-align the header itself */
+}
 .user-projects {
     margin: 20px auto
 }
